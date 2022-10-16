@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DynamicSO.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="defaultStyle" TargetType="ImageButton">
+                <Setter Property="BorderColor" Value="Gray"/>
+                <Setter Property="BorderWidth" Value="2" />
+            </Style>
+            <Style x:Key="selectedStyle" TargetType="ImageButton">
+                <Setter Property="BorderColor" Value="Blue"/>
+                <Setter Property="BorderWidth" Value="5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <ImageButton x:Name="Image1"  Source="balzwart.png" Style="{DynamicResource defaultStyle}" />
+
+        <Button Text="Change" Clicked="Button_Clicked" />
+        <Button Text="Back" Clicked="Button_Clicked_1" />
+    </StackLayout>
+
+</ContentPage>
